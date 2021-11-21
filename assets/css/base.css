@@ -1,0 +1,77 @@
+
+/* khai báo biến define để sao gọi tên dùng cho nhanh */
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #dacb46;
+    
+    --header-height: 55px;
+    --header-height-input: 36px;
+    --header-height-nav: 47px;
+    --container-combo-item-height: 157.41px;
+    --film-item-height: 270px;
+    --footer-height: 1000px;
+}
+
+/* seleter * apply tất cả css lên tất cả phần tử html */
+* {
+    /* có tính chất kế thừa thẻ cha, cứ ghi vào đây sau giải thích */
+    box-sizing: inherit;
+}
+
+html {
+    /* font-size 62.5% thì sai 1 rem = 10px */
+    font-size: 62.5%;
+    /* đặt chiều cao chữ cho all page, chữ nào chiều cao khác set sau */
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    /* box-sizing: để không bị độn chiều cao box khi padding */
+    box-sizing: border-box;
+}
+
+/* btn css */
+.btn {
+    border: none;
+    background-color: #fff;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    min-width: 100px;
+    color: var(--text-color);
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor : pointer;
+
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* animation for box notify */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

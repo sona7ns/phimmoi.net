@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phim mới</title>
+    <!-- reset css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <!-- css grid để kết hợp chia khung và responsive -->
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <!-- css mấy cái chung ban đầu -->
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <!-- css chính -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- css để responsive trên các thiết bị -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <!-- nếu trình duyệt IE < 9 thì comment dưới sẽ thành code chạy dc, code scrip dước có chức năng để chạy dc media-query để responsive trên trình chuyệt thấp IE < 9 -->
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.1/respond.js"></script>
+    <![endif]-->
+    <!-- dùng google font roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- icon fontawesome -->
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+<body>
+    <div id="app">
+        <!-- BEGIN HEADER -->
+        <header class="header">
+            <div class="header-body">
+                <div class="grid wide">
+                    <div class="header-body__wrap">
+                        <a href = "#" class="header-body__logo">
+                            <img src="./assets/img/header/logo.png" alt="logo" class="header-body__logo-img">
+                        </a>
+                        <div class="header-body__widget-search">
+                            <input type="text" placeholder="Tìm: tên phim, đạo diễn, diễn viên" class="header-body__widget-search-input">
+                            <img src="./assets/img/header/search-icon.png" alt="icon-search" class="header-body__widget-search-icon">
+                        </div>
+                        <div class="header-body__login">   
+                             <ul class="header-body__login-list">
+                                 <li class="header-body__login-item js__register-btn">
+                                     <span>Đăng ký</span>
+                                 </li>
+                                 <li class="header-body__login-item js__login-btn">
+                                    <span>Đăng nhập</span>
+                                </li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <div class="grid wide">
+                    <ul class="header-nav__list">
+                        <li class="header-nav__item">
+                            <a class="header-nav__item-link" href="#">Phim mới</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a class="header-nav__item-link" href="#">Thể loại</a>
+                            <ul class="header-nav__item-sub-list">
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Chiến tranh</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Cổ trang</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Gia đình</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Hài hước</a>
+                                </li>
+
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Hành động</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Hình sự</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Võ thuật</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Kinh dị</a>
+                                </li>
+                              
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Tâm lý</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Viễn tưởng</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Hoặt hình</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Thần thoại</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-nav__item">
+                            <a class="header-nav__item-link" href="#">Quốc gia</a>
+                            <ul class="header-nav__item-sub-list">
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Việt nam</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Ấn độ</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Hồng công</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Nhật bản</a>
+                                </li>
+
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Thái lan</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Hàn quốc</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Trung quốc</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Mỹ</a>
+                                </li>
+                              
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Singapore</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Đài loan</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Philippines</a>
+                                </li>
+                                <li class="header-nav__item-sub-item">
+                                    <a href="#" class="header-nav__item-sub-item-link">Châu âu</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header-nav__item">
+                            <a class="header-nav__item-link" href="#">Phim lẻ</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a class="header-nav__item-link" href="#">Phim bộ</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a class="header-nav__item-link" href="#">Phim thuyết minh</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a class="header-nav__item-link" href="#">Phim chiếu rạp</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a class="header-nav__item-link" href="#">Trailer</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- begin modal -->
+        <!-- modal--active -->
+        <div class="modal js__modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+                <!-- begin form login -->
+                <!-- modal__wrap--active -->
+                <div class="modal__wrap js__modal-login">
+                    <div class="modal__close-button">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <h3 class="modal__header">Mời bạn đăng nhập</h3>
+                    <div class="modal__container">
+                        <div class="modal__container-item">
+                            <span class="modal__container-item-icon"><i class="fas fa-envelope"></i></span>
+                            <input id="email" type="email" placeholder="Nhập email đăng ký" class="modal__container-item-input">
+                        </div>
+                        <div class="modal__container-item">
+                            <span class="modal__container-item-icon"><i class="fas fa-lock"></i></span>
+                            <input id="password" type="password" placeholder="Nhập password" class="modal__container-item-input">
+                        </div>
+                        <button class="modal__buttom">Đăng nhập</button>
+                    </div>
+                    <div class="modal__footer">
+                        <span>Hoặc</span>
+                        <span href="#" class="modal__footer-link">Đăng ký</span>
+                    </div>
+                </div>
+                <!-- end form login -->
+                <!-- begin form register -->
+                <div class="modal__wrap js__modal-register">
+                    <div class="modal__close-button">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <h3 class="modal__header">Mời bạn đăng ký</h3>
+                    <div class="modal__container">
+                        <div class="modal__container-item">
+                            <span class="modal__container-item-icon"><i class="fas fa-envelope"></i></span>
+                            <input type="email" placeholder="Nhập email đăng ký" class="modal__container-item-input">
+                        </div>
+                        <div class="modal__container-item">
+                            <span class="modal__container-item-icon"><i class="fas fa-lock"></i></span>
+                            <input type="password" placeholder="Nhập password" class="modal__container-item-input">
+                        </div>
+                        <div class="modal__container-item">
+                            <span class="modal__container-item-icon"><i class="fas fa-lock"></i></span>
+                            <input type="password" placeholder="Nhập lại password" class="modal__container-item-input">
+                        </div>
+                        <button class="modal__buttom">Đăng ký</button>
+                    </div>
+                    <div class="modal__footer">
+                        <span>Hoặc</span>
+                        <span href="#" class="modal__footer-link">Đăng nhập</span>
+                    </div>
+                </div>
+                <!-- end form register -->
+            </div>
+        </div>
+        <!-- end modal -->
+        <!-- END HEADER -->
+<!-- =========================================== -->
+
+<!-- BEGIN CONTAINER -->
+        <div class="container">
+            <div class="grid wide">
+                <div class="slide__wapper">
+                    <h3 class="slide__headding">Phim đề cử</h3>
+                    <div class="slide__headding-line"></div>
+                    <div class="slide__border-list">
+                        <ul class="slide__list">
+                            <!-- <li class="slide__item">
+                                <a href="#" class="slide_item-link">
+                                    <div class="slide__item-img" style="background-image: url('./assets/img/container/slide/slide-item/1.jpg');"></div>
+                                    <div class="slide__item-body">
+                                        <h3 class="slide__item-body-name1">Venom 2: Đối Mặt Tử Thù</h3>
+                                        <h4 class="slide__item-body-name2">Venom: Let There Be Carnage</h4>
+                                    </div>
+                                    <span class="slide__item-body-ribbon">HD Vietsub | 90 phút</span>
+                                </a>
+                            </li> -->
+                        </ul>
+                        <button class="slide__buttom slide__buttom-prev" onclick="changeslide(-1)">
+                            <i class="fas fa-angle-left"></i>
+                        </button>
+                        <button class="slide__buttom slide__buttom-next" onclick="changeslide(1)">
+                            <i class="fas fa-angle-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container-body">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-8"> 
+                            <div class="body__left">
+                                <div class="row sm-gutter">
+                                    <div class="col l-6">
+                                        <div class="left-combo">
+                                            <a href="#" class="left-combo__link">
+                                                <img src="./assets/img/container/body-left/1-Tuyen-Tap-Marvel.jpg" title="Tuyen-Tap-Marvel" alt="Tuyen-Tap-Marvel" class="left-combo__img">
+                                            </a>
+                                            <a href="#" class="left-combo__link">
+                                                <img src="./assets/img/container/body-left/2-Tuyen-Tap-DC.jpg" title="Tuyen-Tap-DC" alt="Tuyen-Tap-DC" class="left-combo__img">
+                                            </a>
+                                            <a href="#" class="left-combo__link">
+                                                <img src="./assets/img/container/body-left/3-Co-Trang-Trung-Quoc.jpg" title="Tuyen-Tap-Co-Trang-Trung-Quoc" alt="Tuyen-Tap-Co-Trang-Trung-Quoc" class="left-combo__img">
+                                            </a>
+                                            <a href="#" class="left-combo__link">
+                                                <img src="./assets/img/container/body-left/4-phim-netflix.jpg" title="Tuyen-Tap-phim-netflix" alt="Tuyen-Tap-phim-netflix" class="left-combo__img">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col l-6">
+                                        <div class="left-group">
+                                            <ul class="left-group__headding-list">
+                                                <li class="left-group__headding-item js__odd-movie left-group__headding-item--active">Phim lẻ mới</li>
+                                                <li class="left-group__headding-item js__series-movie">Phim bộ mới</li>
+                                                <li class="left-group__headding-item js__all-movie">Phim bộ full</li>
+                                            </ul>
+                                            <div class="left-group__content">
+                                                <ul class="left-group__content-list left-group__content-list--active">
+                                                    <!-- <a href="#" class="left-group__content-link">
+                                                        <li class="left-group__content-item">
+                                                            <div class="left-group__content-item-thumb" style="background-image: url(./assets/img/container/body-left/left-group-content/1.jpg);"></div>
+                                                            <div class="left-group__content-item-body">
+                                                                <span class="left-group__content-item-body-movie">Marla Lạc Vào Thế Giới Playmobil</span>
+                                                                <span class="left-group__content-item-body-desc">Playmobil: The Movie</span>
+                                                            </div>
+                                                            <span class="left-group__content-item-time">99 phút</span>
+                                                        </li>
+                                                    </a> -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- begin phim chieu rap item-->
+                                <div class="left-group__film-item">
+                                    <div class="left-group__film-item-header">
+                                        <h3 class="left-group__film-item-header-heading">Phim chiếu rạp</h3>
+                                        <div class="left-group__film-item-header-more">
+                                            <a href="">Xem tất cả</a>
+                                            <i class="fas fa-caret-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="left-group__film-item-header-line"></div>
+                                    <div class="row sm-gutter js__film-item1">
+                                        <!-- <div class="col l-3">
+                                            <a href="#" class="left-group__film-item-link">
+                                                <div class="left-group__film-item-img" style="background-image: url(./assets/img/container/body-left/list-film-item/1.jpg);"></div>
+                                                <h4 class="left-group__film-item-name1">Trái Tim Chàng Si Tình</h4>
+                                                <h4 class="left-group__film-item-name2">Duang Jai Nai Montra (2021)</h4>
+                                                <div class="left-group__film-item-status">HD Vietsub</div>
+                                            </a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- end phim chieu rap item-->
+                                <!-- begin phim le moi item-->
+                                <div class="left-group__film-item">
+                                    <div class="left-group__film-item-header">
+                                        <h3 class="left-group__film-item-header-heading">Phim lẻ mới</h3>
+                                        <div class="left-group__film-item-header-more">
+                                            <a href="">Xem tất cả</a>
+                                            <i class="fas fa-caret-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="left-group__film-item-header-line"></div>
+                                    <div class="row sm-gutter js__film-item2">
+                                        <!-- <div class="col l-3">
+                                            <a href="#" class="left-group__film-item-link">
+                                                <div class="left-group__film-item-img" style="background-image: url(./assets/img/container/body-left/list-film-item/1.jpg);"></div>
+                                                <h4 class="left-group__film-item-name1">Trái Tim Chàng Si Tình</h4>
+                                                <h4 class="left-group__film-item-name2">Duang Jai Nai Montra (2021)</h4>
+                                                <div class="left-group__film-item-status">HD Vietsub</div>
+                                            </a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- end phim le moi item-->
+                                <!-- begin phim bo moi item-->
+                                <div class="left-group__film-item">
+                                    <div class="left-group__film-item-header">
+                                        <h3 class="left-group__film-item-header-heading">Phim bộ mới</h3>
+                                        <div class="left-group__film-item-header-more">
+                                            <a href="">Xem tất cả</a>
+                                            <i class="fas fa-caret-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="left-group__film-item-header-line"></div>
+                                    <div class="row sm-gutter js__film-item3">
+                                        <!-- <div class="col l-3">
+                                            <a href="#" class="left-group__film-item-link">
+                                                <div class="left-group__film-item-img" style="background-image: url(./assets/img/container/body-left/list-film-item/1.jpg);"></div>
+                                                <h4 class="left-group__film-item-name1">Trái Tim Chàng Si Tình</h4>
+                                                <h4 class="left-group__film-item-name2">Duang Jai Nai Montra (2021)</h4>
+                                                <div class="left-group__film-item-status">HD Vietsub</div>
+                                            </a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- end phim bo moi item-->
+                                <!-- begin phim hoat hinh item-->
+                                <div class="left-group__film-item">
+                                    <div class="left-group__film-item-header">
+                                        <h3 class="left-group__film-item-header-heading">Phim hoạt hình</h3>
+                                        <div class="left-group__film-item-header-more">
+                                            <a href="">Xem tất cả</a>
+                                            <i class="fas fa-caret-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="left-group__film-item-header-line"></div>
+                                    <div class="row sm-gutter js__film-item4">
+                                        <!-- <div class="col l-3">
+                                            <a href="#" class="left-group__film-item-link">
+                                                <div class="left-group__film-item-img" style="background-image: url(./assets/img/container/body-left/list-film-item/1.jpg);"></div>
+                                                <h4 class="left-group__film-item-name1">Trái Tim Chàng Si Tình</h4>
+                                                <h4 class="left-group__film-item-name2">Duang Jai Nai Montra (2021)</h4>
+                                                <div class="left-group__film-item-status">HD Vietsub</div>
+                                            </a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <!-- end phim hoat hinh item-->
+
+                            </div>
+                        </div>
+                        <div class="col l-4">
+                            <div class="body__right">
+                                <!-- begin new-movie -->
+                                <div class="new-movie">
+                                    <div class="new-movie__headding">
+                                        <i class="fas fa-star"></i>
+                                        <span>PHIM SẮP CHIẾU</span>
+                                    </div>
+                                    <div class="new-movie__body">
+                                        <div class="new-movie__body-banner" style="background-image: url(./assets/img/container/body-right/new-movie/1.jpg);">
+                                            <a href="#" class="new-movie__body-banner-link">
+                                                <div class="new-movie__body-banner-name1">Hạnh Phúc: Chung Cư Có Độc</div>
+                                                <div class="new-movie__body-banner-name2">Happiness</div>
+                                                <div class="new-movie__body-banner-rate">
+                                                    <div>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <div class="new-movie__body-banner-view">23 lượt xem</div>
+                                                </div>
+                                                <div class="new-movie__body-banner-status">HD Trailer</div>
+                                            </a>
+                                        </div>
+                                        <ul class="new-movie__body-list">
+                                            <li class="new-movie__body-item">
+                                                <a href="#" class="new-movie__body-item-link">
+                                                    <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/2.jpg);"></div>
+                                                    <div class="new-movie__body-item-content">
+                                                        <h4 class="new-movie__body-item-name1">Ăn Cơm Đã, Yêu Để Sau</h4>
+                                                        <span class="new-movie__body-item-name2">Eat Before Loving</span>
+                                                        <span class="new-movie__body-item-view">30 lượt xem</span>
+                                                        <div class="new-movie__body-item-rate">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <span class="new-movie__body-item-status">HD Trailer</span>
+                                                </a>
+                                            </li>
+                                            <li class="new-movie__body-item">
+                                                <a href="#" class="new-movie__body-item-link">
+                                                    <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/3.jpg);"></div>
+                                                    <div class="new-movie__body-item-content">
+                                                        <h4 class="new-movie__body-item-name1">Hãy Để Chúng Tôi Vào</h4>
+                                                        <span class="new-movie__body-item-name2">Let Us In</span>
+                                                        <span class="new-movie__body-item-view">24 lượt xem</span>
+                                                        <div class="new-movie__body-item-rate">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <span class="new-movie__body-item-status">HD Trailer</span>
+                                                </a>
+                                            </li>
+                                            <li class="new-movie__body-item">
+                                                <a href="#" class="new-movie__body-item-link">
+                                                    <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/4.jpg);"></div>
+                                                    <div class="new-movie__body-item-content">
+                                                        <h4 class="new-movie__body-item-name1">Quyết Định Của Chúa</h4>
+                                                        <span class="new-movie__body-item-name2">The God Committee</span>
+                                                        <span class="new-movie__body-item-view">34 lượt xem</span>
+                                                        <div class="new-movie__body-item-rate">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <span class="new-movie__body-item-status">HD Trailer</span>
+                                                </a>
+                                            </li>
+                                            <li class="new-movie__body-item">
+                                                <a href="#" class="new-movie__body-item-link">
+                                                    <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/5.jpg);"></div>
+                                                    <div class="new-movie__body-item-content">
+                                                        <h4 class="new-movie__body-item-name1">Kỳ Nghỉ Trên Sao Hỏa</h4>
+                                                        <span class="new-movie__body-item-name2">In Vacanza Su Marte</span>
+                                                        <span class="new-movie__body-item-view">36 lượt xem</span>
+                                                        <div class="new-movie__body-item-rate">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <span class="new-movie__body-item-status">HD Trailer</span>
+                                                </a>
+                                            </li>
+                                            <li class="new-movie__body-item">
+                                                <a href="#" class="new-movie__body-item-link">
+                                                    <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/6.jpg);"></div>
+                                                    <div class="new-movie__body-item-content">
+                                                        <h4 class="new-movie__body-item-name1">Săn Phù Thủy</h4>
+                                                        <span class="new-movie__body-item-name2">Witch Hunt</span>
+                                                        <span class="new-movie__body-item-view">28 lượt xem</span>
+                                                        <div class="new-movie__body-item-rate">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <span class="new-movie__body-item-status">HD Trailer</span>
+                                                </a>
+                                            </li>
+                                            <li class="new-movie__body-item">
+                                                <a href="#" class="new-movie__body-item-link">
+                                                    <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/7.jpg);"></div>
+                                                    <div class="new-movie__body-item-content">
+                                                        <h4 class="new-movie__body-item-name1">Hiểm Họa Diệt Vong</h4>
+                                                        <span class="new-movie__body-item-name2">The Colony</span>
+                                                        <span class="new-movie__body-item-view">21 lượt xem</span>
+                                                        <div class="new-movie__body-item-rate">
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                            <i class="fas fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <span class="new-movie__body-item-status">HD Trailer</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- end new-movie -->
+                                <!-- begin hot-movie -->
+                                <div class="new-movie__headding">
+                                    <i class="fas fa-star"></i>
+                                    <span>Phim bộ hot trong tuần</span>
+                                </div>
+                                <div class="new-movie__body">
+                                    <div class="new-movie__body-banner" style="background-image: url(./assets/img/container/body-right/new-movie/1-2.jpg);">
+                                        <a href="#" class="new-movie__body-banner-link">
+                                            <div class="new-movie__body-banner-name1">Hạnh Phúc: Chung Cư Có Độc</div>
+                                            <div class="new-movie__body-banner-name2">Happiness</div>
+                                            <div class="new-movie__body-banner-rate">
+                                                <div>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="new-movie__body-banner-view">23 lượt xem</div>
+                                            </div>
+                                            <div class="new-movie__body-banner-status">HD Trailer</div>
+                                        </a>
+                                    </div>
+                                    <ul class="new-movie__body-list">
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/2.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Ăn Cơm Đã, Yêu Để Sau</h4>
+                                                    <span class="new-movie__body-item-name2">Eat Before Loving</span>
+                                                    <span class="new-movie__body-item-view">30 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/3.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Hãy Để Chúng Tôi Vào</h4>
+                                                    <span class="new-movie__body-item-name2">Let Us In</span>
+                                                    <span class="new-movie__body-item-view">24 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/4.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Quyết Định Của Chúa</h4>
+                                                    <span class="new-movie__body-item-name2">The God Committee</span>
+                                                    <span class="new-movie__body-item-view">34 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/5.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Kỳ Nghỉ Trên Sao Hỏa</h4>
+                                                    <span class="new-movie__body-item-name2">In Vacanza Su Marte</span>
+                                                    <span class="new-movie__body-item-view">36 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/6.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Săn Phù Thủy</h4>
+                                                    <span class="new-movie__body-item-name2">Witch Hunt</span>
+                                                    <span class="new-movie__body-item-view">28 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/7.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Hiểm Họa Diệt Vong</h4>
+                                                    <span class="new-movie__body-item-name2">The Colony</span>
+                                                    <span class="new-movie__body-item-view">21 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end hot-movie -->
+                                <!-- begin all-movie -->
+                                <div class="new-movie__headding">
+                                    <i class="fas fa-star"></i>
+                                    <span>Phim lẻ hot trong tuần</span>
+                                </div>
+                                <div class="new-movie__body">
+                                    <div class="new-movie__body-banner" style="background-image: url(./assets/img/container/body-right/new-movie/1-3.jpg);">
+                                        <a href="#" class="new-movie__body-banner-link">
+                                            <div class="new-movie__body-banner-name1">Hạnh Phúc: Chung Cư Có Độc</div>
+                                            <div class="new-movie__body-banner-name2">Happiness</div>
+                                            <div class="new-movie__body-banner-rate">
+                                                <div>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div class="new-movie__body-banner-view">23 lượt xem</div>
+                                            </div>
+                                            <div class="new-movie__body-banner-status">HD Trailer</div>
+                                        </a>
+                                    </div>
+                                    <ul class="new-movie__body-list">
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/2.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Ăn Cơm Đã, Yêu Để Sau</h4>
+                                                    <span class="new-movie__body-item-name2">Eat Before Loving</span>
+                                                    <span class="new-movie__body-item-view">30 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/3.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Hãy Để Chúng Tôi Vào</h4>
+                                                    <span class="new-movie__body-item-name2">Let Us In</span>
+                                                    <span class="new-movie__body-item-view">24 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/4.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Quyết Định Của Chúa</h4>
+                                                    <span class="new-movie__body-item-name2">The God Committee</span>
+                                                    <span class="new-movie__body-item-view">34 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/5.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Kỳ Nghỉ Trên Sao Hỏa</h4>
+                                                    <span class="new-movie__body-item-name2">In Vacanza Su Marte</span>
+                                                    <span class="new-movie__body-item-view">36 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/6.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Săn Phù Thủy</h4>
+                                                    <span class="new-movie__body-item-name2">Witch Hunt</span>
+                                                    <span class="new-movie__body-item-view">28 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                        <li class="new-movie__body-item">
+                                            <a href="#" class="new-movie__body-item-link">
+                                                <div class="new-movie__body-item-img" style="background-image: url(./assets/img/container/body-right/new-movie/7.jpg);"></div>
+                                                <div class="new-movie__body-item-content">
+                                                    <h4 class="new-movie__body-item-name1">Hiểm Họa Diệt Vong</h4>
+                                                    <span class="new-movie__body-item-name2">The Colony</span>
+                                                    <span class="new-movie__body-item-view">21 lượt xem</span>
+                                                    <div class="new-movie__body-item-rate">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <span class="new-movie__body-item-status">HD Trailer</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end all-movie -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- END CONTAINER -->
+
+        <footer class="footer">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-3">
+                        <div class="footer__left">
+                            <a href = "#" class="footer__left-logo-link">
+                                <img src="./assets/img/header/logo.png" alt="logo">
+                            </a>
+                            <div class="footer__left-decrip">
+                                Copyright 2021 © 
+                                <a href="#">Sơn Cún</a> 
+                                <br>
+                                Xem phim mới miễn phí nhanh chất lượng cao. 
+                                Xem Phim online Việt Sub, Thuyết minh, lồng tiếng chất lượng HD.
+                                Xem phim nhanh online chất lượng cao
+                                <a href="#">KUBET</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-6">
+                        <div class="footer__center">
+                            <div class="row">
+                                <div class="col l-4">
+                                    <ul class="footer__center-list">
+                                        <h3 class="footer__center-heading">Phim mới</h3>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim lẻ mới</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim bộ mới</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim chiếu rạp</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim sắp chiếu</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim thuyết mình</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col l-4">
+                                    <ul class="footer__center-list">
+                                        <h3 class="footer__center-heading">Phim bộ</h3>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim hành động</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim kiếm hiệp</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim kinh dị</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim viễn tưởng</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim hoạt hình</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col l-4">
+                                    <ul class="footer__center-list">
+                                        <h3 class="footer__center-heading">Phim bộ</h3>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim bộ hàn quốc</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim bộ trung quốc</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim bộ mỹ</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim bộ việt nam</a>
+                                        </li>
+                                        <li class="footer__center-item">
+                                            <a href="#" class="footer__center-item-link">Phim bộ hồng công</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-3">
+                        <div class="footer__right">
+                            <div class="footer__right-wrapper">
+                                <i class="fas fa-phone-alt"></i>
+                                <div class="footer__right-content">
+                                    Email liên hệ:
+                                    <br>
+                                    son.a7haui@gmail.com
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+
+        </footer>
+
+    </div>
+    <script src="./assets/javascript/app.js"></script>
+    <script src="./assets/javascript/slide.js"></script>
+
+</body>
+</html>
