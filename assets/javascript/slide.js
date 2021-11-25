@@ -93,7 +93,7 @@ const slidesData = [
         background: './assets/img/container/slide/slide-item/1.jpg',
         name1: 'Venom 2: Đối Mặt Tử Thù',
         name2: 'Venom: Let There Be Carnage',
-        time: 'HD Vietsub | 90 phút'
+        ribbon: 'HD Vietsub | 90 phút'
     },
     {
         background: './assets/img/container/slide/slide-item/2.jpg',
@@ -193,8 +193,10 @@ renderSlides(slidesData);
 
 var slideList=document.querySelector('.slide__list');
 var slideItem=Array.from(document.querySelectorAll('.slide__item'));
-var slideWapper=document.querySelector('.slide__wapper');
-var num_page
+// var slideItemLink=Array.from(document.querySelectorAll('.slide_item-link'));
+// var slideWapper=document.querySelector('.slide__wapper');
+var slideWapper=document.querySelector('.slide__border-list');
+var num_page;
 
 // dùng để đếm số trang tùy vào mình chia hiển thị
 // bao nhiêu trên 1 trang
@@ -206,13 +208,15 @@ function makeslide(numberonetime) {
     num_page=Math.ceil(slideItem.length/numberonetime);
     // tính số lượng trang
     slideItem.forEach((el,index)=>{
-        el.style.width=(slideWapper.offsetWidth/100*percentwidth_slide)+'px';
+        // el.style.width=(slideWapper.offsetWidth/100*percentwidth_slide)+'px';
+        el.style.width=250 + 'px';
         // set độ rộng của từng slide
     })
     // slideWapper.offsetWidth/100*percentwidth_slide
     // tại sao không dùng công thức như trên mà tớ commnet lại
     // vì dùng nó sẽ bị sai số nên tránh sai số tớ dùng ở dưới
-    slideList.style.width=(slideWapper.offsetWidth/100*percentwidth_slide)*slideItem.length+'px';
+    // slideList.style.width=(slideWapper.offsetWidth/100*percentwidth_slide)*slideItem.length+'px';
+    slideList.style.width=3000+'px';
 }
 // gọi hàm thử nhé
 makeslide(4);

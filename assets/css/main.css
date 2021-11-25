@@ -1,3 +1,6 @@
+#app {
+    overflow: hidden;
+}
 /* BEGIN HEADER */
 /* header-body */
 .header-body {
@@ -16,10 +19,11 @@
     width: 261px;
     height: var(--header-width);
     text-decoration: none;
+    display: block;
 }
 
 .header-body__logo-img {
-    padding: 0;
+    padding: 4px 0 0 0;
 }
 
 .header-body__widget-search {
@@ -113,7 +117,7 @@
 
 .header-nav__list {
     list-style: none;
-    padding: 0 20px;
+    padding: 0 20px 0 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -137,6 +141,8 @@
     margin-top: 3px;
     margin-bottom: 1px;
     padding: 0 20px;
+    /* không bị xuống hàng khi thi nhỏ chiều ngang */
+    white-space: nowrap;
 }
 
 .header-nav__item-link:hover {
@@ -385,7 +391,7 @@
 
 .slide__item {
     height: 330px; 
-    margin-right: 20px; 
+    margin-right: 16px; 
     position: relative;
 }
 
@@ -393,10 +399,10 @@
     content: '';
     height: 330px;
     position: absolute;
-    right: -20px;
+    right: -16px;
     top: 0;
     background-color: #fff;
-    border-right: 20px solid #1C1C1C;
+    border-right: 16px solid #1C1C1C;
 }
 
 .slide__buttom {
@@ -431,7 +437,7 @@
 }
 
 .slide_item-link{
-    height: 100%;
+    width: 100%;
     text-decoration: none;
     display: block;
     /* background-color: green;
@@ -541,6 +547,7 @@
     list-style: none;
     display: flex;
     padding-left: 0;
+    padding-top: 6px;
     margin: 0;
 }
 
@@ -1002,9 +1009,6 @@
     margin: 5px 0 30px 0;
 }
 
-.footer__center-item {
-}
-
 .footer__center-item-link {
     text-decoration: none;
     color: #fff;
@@ -1023,13 +1027,23 @@
 }
 
 .footer__right-wrapper {
-    display: flex;
-    align-items: center;
     color: #788;
     cursor: pointer;
 }
 
-.footer__right-wrapper:hover {
+.footer__right-wrapper a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #788;
+}
+
+.footer__right-wrapper span {
+    color: rgb(211, 211, 211);
+    font-weight: 600;
+}
+
+.footer__right-wrapper:hover a{
     color: rgb(193, 216, 216);
 }
 
@@ -1042,11 +1056,38 @@
     font-size: 1.3rem;
     line-height: 2rem;
 }
-
-
-
 /* END FOOTER */
 
+/* begin mobile responsive */
+.mobile-menu {
+    padding: 11px 22px;
+    display: none;
+}
+
+.mobile-menu__icon {
+    color: #fff;
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+.mobile-search {
+    padding: 15px 22px;
+    display: none;
+}
+
+.mobile-search__icon {
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+/* end mobile responsive */
 
 
 

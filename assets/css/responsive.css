@@ -1,14 +1,120 @@
 /* MOBILE & TABLET: width <= 1023px */
 @media only screen and (max-width: 63.9375em) {
+    .mobile-tablet-hiden {
+        display: none;
+    }
 
+    .footer__left-logo-link img {
+        width: 50%;
+    }
+    .footer__left-logo-link {
+        display: flex;
+    justify-content: center;
+    }
+    .footer__left-decrip {
+        text-align: center;
+    }
+    .footer__center-heading,
+    .footer__center-item-link {
+        text-align: center;
+    }
+    .footer__right {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* TABLET: width >= 740px and width <= 1023px */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .tablet-hiden {
+        display: none;
+    }
+    /* -------- */
+    .header-body__logo-img,
+    .header-body__logo {
+        width: 200px;
+    }
+    .header-body__widget-search {
+        margin-left: 10px;
+        margin-right: 0;
+        min-width: 20px;
+        flex: 1;
+    }
+    .header-body__login-item:first-child {
+        width: 60px;
+    }
+    .header-body__login-item:last-child {
+        width: 76px;
+    }
+    .header-body__login {
+        margin: 0;
+    }
+    .header-body__login-list {
+        margin-right: -12px;
+    }
+    .header-nav__list {
+        flex-wrap: wrap;
+    }
 
+    .header-nav__item-sub-list--tablet {
+        left: -125px;
+    }
+    .header-nav__item-sub-list::before {
+        width: 250px;
+    }
 }
 
 /* MOBILE: width <= 739px */
 @media only screen and (max-width: 46.1875em) {
- 
+    .mobile-hiden {
+        display: none;
+    }
+
+    .header-body__wrap {
+        justify-content: space-between;
+    }
+
+    .header-body__logo-img {
+        width: 185px;
+    }
+
+    .mobile-menu {
+        order: 1;
+        display: block;
+    }
+
+    .header-body__logo {
+        order: 2;
+        width: auto;
+    }
+
+    .mobile-search {
+        order: 3;
+        display: block;
+    }
+
+
+
+
+
+    .container {
+        margin-top: -10px;
+        height: 8020px;
+    }
+
+    .left-group__film-item,
+    .left-group,
+    .slide__border-list {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .left-group__film-item-img {
+        background-size: cover;
+    }
+
+    .left-group__film-item-name1 {
+        padding-top: 7px;
+    }
+
 }

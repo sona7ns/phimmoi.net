@@ -28,6 +28,29 @@ html {
     font-family: 'Roboto', sans-serif;
     /* box-sizing: để không bị độn chiều cao box khi padding */
     box-sizing: border-box;
+    /* chuyển cảnh cuộn trang */
+    scroll-behavior: smooth;
+}
+
+/* -- css Scroll-Bar --  */
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+  
+/* background */
+::-webkit-scrollbar-track {
+background: #213342; 
+}
+
+/* scrollBar */
+::-webkit-scrollbar-thumb {
+background: #00ACC1; 
+}
+
+/* scrollBar on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #1195a7; 
 }
 
 /* btn css */

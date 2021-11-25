@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phim mới</title>
+    <title>Phim mới - Fake :)</title>
+    <link rel="icon" href="./assets/img/favicon/favicon_phimmoi.png" type="image/gif" sizes="16x16">
     <!-- reset css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <!-- css grid để kết hợp chia khung và responsive -->
@@ -31,14 +32,57 @@
             <div class="header-body">
                 <div class="grid wide">
                     <div class="header-body__wrap">
+                        <!-- begin mobile responsive -->
+                        <label for="mobile-menu__input" class="mobile-menu">
+                            <i class="fas fa-bars mobile-menu__icon"></i>
+                        </label>
+                        <input type="checkbox" id="mobile-menu__input">
+                        <label for="mobile-menu__input" class="mobile-menu__overlay"></label>
+
+                        <div class="mobile-menu__wapper">
+                            <div class="mobile-menu__logo">
+                                
+                            </div>
+                            <ul class="mobile-menu__list">
+                                <li class="mobile-menu__item">
+                                    <a href="" class="mobile-menu__item-link">Trang chủ</a>
+                                </li>
+                                <li class="mobile-menu__item">
+                                    <a href="" class="mobile-menu__item-link">Đăng nhập</a>
+                                </li>
+                                <li class="mobile-menu__item">
+                                    <a href="" class="mobile-menu__item-link">Đăng ký</a>
+                                </li>
+                                <li class="mobile-menu__item">
+                                    <a href="" class="mobile-menu__item-link">Trợ giúp</a>
+                                </li>
+                                <li class="mobile-menu__item">
+                                    <a href="" class="mobile-menu__item-link">Đăng xuất</a>
+                                </li>
+                            </ul>
+    
+                            <span class="mobile-menu__about">
+                                Design by
+                                <a href="https://www.facebook.com/son.ic.haui" class="mobile-menu__about-link">Sơn Cún</a>
+                            </span>
+                        </div>
+
+
+
+                        <div class="mobile-search">
+                            <i class="fas fa-search mobile-search__icon"></i>
+                        </div>
+
+                        <!-- end mobile responsive -->
+
                         <a href = "#" class="header-body__logo">
                             <img src="./assets/img/header/logo.png" alt="logo" class="header-body__logo-img">
                         </a>
-                        <div class="header-body__widget-search">
+                        <div class="header-body__widget-search mobile-hiden">
                             <input type="text" placeholder="Tìm: tên phim, đạo diễn, diễn viên" class="header-body__widget-search-input">
                             <img src="./assets/img/header/search-icon.png" alt="icon-search" class="header-body__widget-search-icon">
                         </div>
-                        <div class="header-body__login">   
+                        <div class="header-body__login mobile-hiden">   
                              <ul class="header-body__login-list">
                                  <li class="header-body__login-item js__register-btn">
                                      <span>Đăng ký</span>
@@ -51,14 +95,17 @@
                     </div>
                 </div>
             </div>
-            <div class="header-nav">
+            <div class="header-nav mobile-hiden">
                 <div class="grid wide">
                     <ul class="header-nav__list">
                         <li class="header-nav__item">
                             <a class="header-nav__item-link" href="#">Phim mới</a>
                         </li>
                         <li class="header-nav__item">
-                            <a class="header-nav__item-link" href="#">Thể loại</a>
+                            <a class="header-nav__item-link" href="#">
+                                Thể loại
+                                <i class="fas fa-caret-down"></i>
+                            </a>
                             <ul class="header-nav__item-sub-list">
                                 <li class="header-nav__item-sub-item">
                                     <a href="#" class="header-nav__item-sub-item-link">Chiến tranh</a>
@@ -101,8 +148,11 @@
                             </ul>
                         </li>
                         <li class="header-nav__item">
-                            <a class="header-nav__item-link" href="#">Quốc gia</a>
-                            <ul class="header-nav__item-sub-list">
+                            <a class="header-nav__item-link" href="#">
+                                Quốc gia
+                                <i class="fas fa-caret-down"></i>
+                            </a>
+                            <ul class="header-nav__item-sub-list header-nav__item-sub-list--tablet">
                                 <li class="header-nav__item-sub-item">
                                     <a href="#" class="header-nav__item-sub-item-link">Việt nam</a>
                                 </li>
@@ -149,13 +199,13 @@
                         <li class="header-nav__item">
                             <a class="header-nav__item-link" href="#">Phim bộ</a>
                         </li>
-                        <li class="header-nav__item">
+                        <li class="header-nav__item tablet-hiden">
                             <a class="header-nav__item-link" href="#">Phim thuyết minh</a>
                         </li>
-                        <li class="header-nav__item">
+                        <li class="header-nav__item tablet-hiden">
                             <a class="header-nav__item-link" href="#">Phim chiếu rạp</a>
                         </li>
-                        <li class="header-nav__item">
+                        <li class="header-nav__item tablet-hiden">
                             <a class="header-nav__item-link" href="#">Trailer</a>
                         </li>
                     </ul>
@@ -256,10 +306,10 @@
             <div class="container-body">
                 <div class="grid wide">
                     <div class="row">
-                        <div class="col l-8"> 
+                        <div class="col l-8 m-12 s-12"> 
                             <div class="body__left">
                                 <div class="row sm-gutter">
-                                    <div class="col l-6">
+                                    <div class="col l-6 m-6 s-0">
                                         <div class="left-combo">
                                             <a href="#" class="left-combo__link">
                                                 <img src="./assets/img/container/body-left/1-Tuyen-Tap-Marvel.jpg" title="Tuyen-Tap-Marvel" alt="Tuyen-Tap-Marvel" class="left-combo__img">
@@ -275,7 +325,7 @@
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col l-6">
+                                    <div class="col l-6 m-6 s-12">
                                         <div class="left-group">
                                             <ul class="left-group__headding-list">
                                                 <li class="left-group__headding-item js__odd-movie left-group__headding-item--active">Phim lẻ mới</li>
@@ -311,7 +361,7 @@
                                     </div>
                                     <div class="left-group__film-item-header-line"></div>
                                     <div class="row sm-gutter js__film-item1">
-                                        <!-- <div class="col l-3">
+                                        <!-- <div class="col l-3 m-3 s-4">
                                             <a href="#" class="left-group__film-item-link">
                                                 <div class="left-group__film-item-img" style="background-image: url(./assets/img/container/body-left/list-film-item/1.jpg);"></div>
                                                 <h4 class="left-group__film-item-name1">Trái Tim Chàng Si Tình</h4>
@@ -391,7 +441,7 @@
 
                             </div>
                         </div>
-                        <div class="col l-4">
+                        <div class="col l-4 m-0 s-0">
                             <div class="body__right">
                                 <!-- begin new-movie -->
                                 <div class="new-movie">
@@ -816,7 +866,7 @@
         <footer class="footer">
             <div class="grid wide">
                 <div class="row">
-                    <div class="col l-3">
+                    <div class="col l-3 m-12 s-12">
                         <div class="footer__left">
                             <a href = "#" class="footer__left-logo-link">
                                 <img src="./assets/img/header/logo.png" alt="logo">
@@ -832,10 +882,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col l-6">
+                    <div class="col l-6 m-12 s-12">
                         <div class="footer__center">
                             <div class="row">
-                                <div class="col l-4">
+                                <div class="col l-4 m-4 s-4">
                                     <ul class="footer__center-list">
                                         <h3 class="footer__center-heading">Phim mới</h3>
                                         <li class="footer__center-item">
@@ -855,9 +905,9 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col l-4">
+                                <div class="col l-4 m-4 s-4">
                                     <ul class="footer__center-list">
-                                        <h3 class="footer__center-heading">Phim bộ</h3>
+                                        <h3 class="footer__center-heading">Phim lẻ</h3>
                                         <li class="footer__center-item">
                                             <a href="#" class="footer__center-item-link">Phim hành động</a>
                                         </li>
@@ -875,7 +925,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col l-4">
+                                <div class="col l-4 m-4 s-4">
                                     <ul class="footer__center-list">
                                         <h3 class="footer__center-heading">Phim bộ</h3>
                                         <li class="footer__center-item">
@@ -898,15 +948,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col l-3">
+                    <div class="col l-3 m-12 s-12">
                         <div class="footer__right">
                             <div class="footer__right-wrapper">
-                                <i class="fas fa-phone-alt"></i>
-                                <div class="footer__right-content">
-                                    Email liên hệ:
-                                    <br>
-                                    son.a7haui@gmail.com
-                                </div>
+                                <a href="https://www.facebook.com/son.ic.haui">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <div class="footer__right-content">
+                                        Facebook liên hệ: 
+                                        <span>Văn Sơn Nguyễn</span> 
+                                        <br>
+                                        https://www.facebook.com/son.ic.haui
+                                    </div>
+                                </a>
+                                
                             </div>
                         </div>
                     </div>
@@ -918,7 +972,7 @@
         </footer>
 
     </div>
-    <script src="./assets/javascript/app.js"></script>
+    <script src="./assets/javascript/main.js"></script>
     <script src="./assets/javascript/slide.js"></script>
 
 </body>
