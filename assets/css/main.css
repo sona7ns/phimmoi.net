@@ -558,6 +558,7 @@
     font-weight: 400;
     color: #ddd;
     cursor: pointer;
+    text-align: center;
 }
 
 .left-group__headding-item:hover {
@@ -1085,6 +1086,121 @@
     font-size: 2rem;
     color: #fff;
 }
+
+.mobile-menu__wapper {
+    background-image: url(../img/container/body_bg.gif);
+    position: fixed;
+    width: 58%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform ease-in 0.3s;
+}
+
+.mobile-menu__overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    animation: fadeIn ease 1s;
+    display: none;
+    z-index: 1;
+}
+
+.mobile-menu__logo {
+    text-align: center;
+    border-bottom: 2px solid #fff;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mobile-menu__input:checked ~ .mobile-menu__wapper {
+    transform: translateX(0);
+}
+
+#mobile-menu__input:checked ~ .mobile-menu__overlay {
+    display: block;
+}
+
+
+.mobile-menu__list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.mobile-menu__item {
+    cursor: pointer;
+}
+
+.mobile-menu__item-link {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+
+.mobile-menu__item-link:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu__item-link:hover i {
+    color: var(--primary-color);
+}
+
+.mobile-menu__item-link i {
+    font-size: 1.1rem;
+    color: #fff;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mobile-menu__login {
+    margin-top: auto;
+}
+
+.mobile-menu__item-sub-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 1px;
+    border: 1px solid var(--primary-color);
+    animation: fadeIn ease-in 0.5s;
+    display: none;
+}
+
+.mobile-menu__item.mobile-menu__item--avtive .mobile-menu__item-sub-list {
+    display: block;
+}
+
+.mobile-menu__item-sub-item {
+    text-align: center;
+
+}
+
+.mobile-menu__item-sub-item-link {
+    color: rgb(218, 216, 210);
+    display: block;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 8px;
+}
+
+
+
+
 
 
 /* end mobile responsive */

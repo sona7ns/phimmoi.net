@@ -36,32 +36,125 @@
                         <label for="mobile-menu__input" class="mobile-menu">
                             <i class="fas fa-bars mobile-menu__icon"></i>
                         </label>
-                        <input type="checkbox" id="mobile-menu__input">
-                        <label for="mobile-menu__input" class="mobile-menu__overlay"></label>
+                        <input hidden type="checkbox" id="mobile-menu__input">
+                        <label for="mobile-menu__input" class="mobile-menu__overlay js__mobile-menu__overlay"></label>
 
                         <div class="mobile-menu__wapper">
                             <div class="mobile-menu__logo">
-                                
+                                <img src="./assets/img/header/logo.png" alt="logo" class="header-body__logo-img">
                             </div>
                             <ul class="mobile-menu__list">
                                 <li class="mobile-menu__item">
-                                    <a href="" class="mobile-menu__item-link">Trang chủ</a>
+                                    <a href="" class="mobile-menu__item-link">Phim mới</a>
+                                </li>
+                                <!-- mobile-menu__item--avtive -->
+                                <li class="mobile-menu__item js__mobile-menu__item">
+                                    <a href="#" class="mobile-menu__item-link js__mobile-menu__item-link">
+                                        Thể loại
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                    <ul class="mobile-menu__item-sub-list">
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Chiến tranh</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Cổ trang</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Gia đình</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Hài hước</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Hành động</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Hình sự</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Võ thuật</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Kinh dị</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Tâm lý</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Viễn tưởng</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Hoặt hình</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Thần thoại</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- mobile-menu__item--avtive -->
+                                <li class="mobile-menu__item js__mobile-menu__item">
+                                    <a href="#" class="mobile-menu__item-link js__mobile-menu__item-link">
+                                        Quốc gia
+                                        <i class="fas fa-plus"></i>
+                                    </a>
+                                    <ul class="mobile-menu__item-sub-list">
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Việt nam</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Ấn độ</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Hồng công</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Nhật bản</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Thái lan</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Hàn quốc</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Trung quốc</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Mỹ</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Singapore</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Đài loan</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Philippines</a>
+                                        </li>
+                                        <li class="mobile-menu__item-sub-item">
+                                            <a href="#" class="mobile-menu__item-sub-item-link">Châu âu</a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li class="mobile-menu__item">
-                                    <a href="" class="mobile-menu__item-link">Đăng nhập</a>
+                                    <a href="" class="mobile-menu__item-link">Phim lẻ</a>
                                 </li>
                                 <li class="mobile-menu__item">
-                                    <a href="" class="mobile-menu__item-link">Đăng ký</a>
+                                    <a href="" class="mobile-menu__item-link">Phim bộ</a>
                                 </li>
                                 <li class="mobile-menu__item">
-                                    <a href="" class="mobile-menu__item-link">Trợ giúp</a>
+                                    <a href="" class="mobile-menu__item-link">Phim thuyết minh</a>
                                 </li>
                                 <li class="mobile-menu__item">
-                                    <a href="" class="mobile-menu__item-link">Đăng xuất</a>
+                                    <a href="" class="mobile-menu__item-link">Phim chiếu rạp</a>
+                                </li>
+                                <li class="mobile-menu__item">
+                                    <a href="" class="mobile-menu__item-link">Trailer</a>
                                 </li>
                             </ul>
     
-                            <span class="mobile-menu__about">
+                            <span class="mobile-menu__login">
                                 Design by
                                 <a href="https://www.facebook.com/son.ic.haui" class="mobile-menu__about-link">Sơn Cún</a>
                             </span>
@@ -165,7 +258,6 @@
                                 <li class="header-nav__item-sub-item">
                                     <a href="#" class="header-nav__item-sub-item-link">Nhật bản</a>
                                 </li>
-
                                 <li class="header-nav__item-sub-item">
                                     <a href="#" class="header-nav__item-sub-item-link">Thái lan</a>
                                 </li>
@@ -178,7 +270,6 @@
                                 <li class="header-nav__item-sub-item">
                                     <a href="#" class="header-nav__item-sub-item-link">Mỹ</a>
                                 </li>
-                              
                                 <li class="header-nav__item-sub-item">
                                     <a href="#" class="header-nav__item-sub-item-link">Singapore</a>
                                 </li>

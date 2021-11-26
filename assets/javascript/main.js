@@ -59,7 +59,26 @@ loginSwiths[1].onclick = function() {
 }
 // === END FORM LOGIN ===
 
+// === BEGIN MOBILE MENU ===
+const mobileItemLinks = $$('.js__mobile-menu__item-link')
+const mobileItems = $$('.js__mobile-menu__item')
+const mobileOverlay = $('.js__mobile-menu__overlay')
 
+//  nếu bấm vào item danh sách trong mobile menu thì hiển thị nội dung sub-list
+for (var mobileItemLink of mobileItemLinks) {
+    mobileItemLink.onclick = function(e) {
+        e.preventDefault();
+        mobileItemLink.parentElement.classList.toggle('mobile-menu__item--avtive');
+    }
+} 
+
+// khi bấm ra ngoài overlay thì đó menu cấp 2 nếu có sổ ra
+mobileOverlay.onclick = function() {
+    for (var mobileItem of mobileItems) {
+        mobileItem.classList.remove('mobile-menu__item--avtive');
+    }  
+}
+// === END MOBILE MENU ===
 
 // === BEGIN GROUP FIM BỘ MỚI
 const moviesData1 = [
