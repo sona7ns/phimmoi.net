@@ -72,13 +72,33 @@ for (var mobileItemLink of mobileItemLinks) {
     }
 } 
 
-// khi bấm ra ngoài overlay thì đó menu cấp 2 nếu có sổ ra
+
+// khi bấm ra ngoài overlay thì đó menu cấp 2 nếu có sổ ra se đóng vào
 mobileOverlay.onclick = function() {
     for (var mobileItem of mobileItems) {
         mobileItem.classList.remove('mobile-menu__item--avtive');
     }  
 }
 // === END MOBILE MENU ===
+
+// === begin bật tắt searchbar ở mobile ===
+const mobileSearchBar = $('.mobile-search-bar');
+const mobileSearch = $('.mobile-search');
+const mobileSearchBarOverlay = $('.mobile-search-bar__overlay');
+
+mobileSearch.onclick = function() {
+    mobileSearchBar.classList.toggle('mobile-search-bar--active');
+    mobileSearchBarOverlay.classList.add('mobile-search-bar__overlay--active');
+}
+
+mobileSearchBarOverlay.onclick = function() {
+    mobileSearchBar.classList.remove('mobile-search-bar--active');
+    mobileSearchBarOverlay.classList.remove('mobile-search-bar__overlay--active');
+
+}
+// === end bật tắt searchbar ở mobile ===
+
+
 
 // === BEGIN GROUP FIM BỘ MỚI
 const moviesData1 = [

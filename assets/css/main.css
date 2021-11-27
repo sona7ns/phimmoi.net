@@ -13,6 +13,7 @@
     display: flex;
     align-items: center;
     height: var(--header-height);
+    position: relative;
 }
 
 .header-body__logo {
@@ -1070,13 +1071,7 @@
     font-size: 3rem;
 }
 
-
-
-
-
-
-
-
+/* mobile search */
 .mobile-search {
     padding: 15px 22px;
     display: none;
@@ -1087,6 +1082,66 @@
     color: #fff;
 }
 
+.mobile-search-bar__overlay {
+    position: fixed;
+    top: calc(var(--header-height) + var(--mobile-search-height));
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none;
+}
+
+.mobile-search-bar__overlay.mobile-search-bar__overlay--active {
+    display: block;
+}
+
+.mobile-search-bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 42px;
+    z-index: 1;
+    align-items: center;
+    border-radius: 3px;
+    display: none;
+}
+
+.mobile-search-bar.mobile-search-bar--active {
+    display: flex;
+}
+
+.mobile-search-bar__input {
+    height: var(--mobile-search-height);
+    outline: none;
+    border-radius: 3px;
+    width: 100%;
+    height: var(--mobile-search-height);
+    background-color: #fff;
+    /* border-radius: 100px; */
+    border: 1px;
+    box-shadow: inset 1px 1px 1px rgb(0 0 0 / 40%), 1px 1px 0 rgb(255 255 255 / 15%);
+    color: #9f9f9f;
+    padding-left: 20px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.mobile-search-bar__submit {
+    height: var(--mobile-search-height);
+    line-height: 42px;
+    font-size: 1.8rem;
+    padding: 0 10px;
+    color: #fff;
+    white-space: nowrap;
+    background-color: #ff8040;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
 .mobile-menu__wapper {
     background-image: url(../img/container/body_bg.gif);
     position: fixed;
@@ -1094,7 +1149,7 @@
     left: 0;
     top: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     transform: translateX(-100%);
@@ -1172,6 +1227,21 @@
     margin-top: auto;
 }
 
+.mobile-menu__about-link {
+    font-size: 1.4rem;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.mobile-menu__about-link:hover {
+    color: var(--primary-color);
+}
+
 .mobile-menu__item-sub-list {
     list-style: none;
     padding-left: 0;
@@ -1197,6 +1267,8 @@
     font-size: 1.4rem;
     padding: 8px;
 }
+
+
 
 
 
