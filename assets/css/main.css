@@ -562,6 +562,7 @@
     color: #ddd;
     cursor: pointer;
     text-align: center;
+    white-space: nowrap;
 }
 
 .left-group__headding-item:hover {
@@ -625,7 +626,7 @@
 .left-group__content-item-body-movie {
     color: #ddd;
     padding-bottom: 4px;
-    /* ... khi chữ dài quá */
+    /* ... khi chữ dài quá*/
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -1010,6 +1011,7 @@
     font-size: 2.4rem;
     font-weight: 400;
     margin: 5px 0 30px 0;
+    white-space: nowrap;
 }
 
 .footer__center-item-link {

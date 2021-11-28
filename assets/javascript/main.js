@@ -63,22 +63,23 @@ loginSwiths[1].onclick = function() {
 // const mobileItemLinks = $$('.js__mobile-menu__item-link')
 const mobileItems = $$('.js__mobile-menu__item')
 const mobileOverlay = $('.js__mobile-menu__overlay')
+const mobileSearchBarHeight = $('.mobile-menu__wapper');
 
 //  nếu bấm vào item danh sách trong mobile menu thì hiển thị nội dung sub-list
-// for (var mobileItemLink of mobileItemLinks) {
-//     mobileItemLink.onclick = function(e) {
-//         e.preventDefault();
-//         mobileItemLink.parentElement.classList.toggle('mobile-menu__item--avtive');
+// for (var mobileItem of mobileItems) {
+//     mobileItem.onclick = function() {
+//         mobileItem.classList.toggle('mobile-menu__item--avtive');
+//         // console.log(mobileItem)
 //     }
 // } 
 
-for (var mobileItem of mobileItems) {
-    mobileItem.onclick = function() {
-        mobileItem.classList.toggle('mobile-menu__item--avtive');
-        // console.log(mobileItem)
-    }
-} 
+mobileItems[0].onclick = function() {
+    mobileItems[0].classList.toggle('mobile-menu__item--avtive');
+}
 
+mobileItems[1].onclick = function() {
+    mobileItems[1].classList.toggle('mobile-menu__item--avtive');
+}
 
 // khi bấm ra ngoài overlay thì đó menu cấp 2 nếu có sổ ra se đóng vào
 mobileOverlay.onclick = function() {
@@ -101,7 +102,6 @@ mobileSearch.onclick = function() {
 mobileSearchBarOverlay.onclick = function() {
     mobileSearchBar.classList.remove('mobile-search-bar--active');
     mobileSearchBarOverlay.classList.remove('mobile-search-bar__overlay--active');
-
 }
 // === end bật tắt searchbar ở mobile ===
 

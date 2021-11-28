@@ -114,4 +114,7 @@
         padding-top: 7px;
     }
 
+    .left-group__content-item-body {
+        width: 184px;
+    }
 }
