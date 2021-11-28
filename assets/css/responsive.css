@@ -22,6 +22,7 @@
         display: flex;
         justify-content: center;
     }
+
 }
 
 /* TABLET: width >= 740px and width <= 1023px */
@@ -92,10 +93,6 @@
         order: 3;
         display: block;
     }
-
-
-
-
 
     .container {
         margin-top: -10px;

@@ -6,7 +6,9 @@
 .header-body {
     width: 100%;
     height: var(--header-height);
-    background-image: url(../img/header/header-bg.jpg);
+    /* background-image: url(../img/header/header-bg.jpg); */
+    background-image: url(../img/header/header-bg-mobile.png);
+    /* background-color: #000; */
 }
 
 .header-body__wrap {
@@ -728,7 +730,6 @@
     font-weight: 400;
     color: #44e2ff;
     padding: 0;
-
 }
 
 .left-group__film-item-name2 {

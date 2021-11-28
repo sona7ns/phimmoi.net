@@ -60,15 +60,22 @@ loginSwiths[1].onclick = function() {
 // === END FORM LOGIN ===
 
 // === BEGIN MOBILE MENU ===
-const mobileItemLinks = $$('.js__mobile-menu__item-link')
+// const mobileItemLinks = $$('.js__mobile-menu__item-link')
 const mobileItems = $$('.js__mobile-menu__item')
 const mobileOverlay = $('.js__mobile-menu__overlay')
 
 //  nếu bấm vào item danh sách trong mobile menu thì hiển thị nội dung sub-list
-for (var mobileItemLink of mobileItemLinks) {
-    mobileItemLink.onclick = function(e) {
-        e.preventDefault();
-        mobileItemLink.parentElement.classList.toggle('mobile-menu__item--avtive');
+// for (var mobileItemLink of mobileItemLinks) {
+//     mobileItemLink.onclick = function(e) {
+//         e.preventDefault();
+//         mobileItemLink.parentElement.classList.toggle('mobile-menu__item--avtive');
+//     }
+// } 
+
+for (var mobileItem of mobileItems) {
+    mobileItem.onclick = function() {
+        mobileItem.classList.toggle('mobile-menu__item--avtive');
+        // console.log(mobileItem)
     }
 } 
 
