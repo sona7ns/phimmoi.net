@@ -354,8 +354,9 @@
 /* BEGIN CONTAINER */
 .container {
     background-image: url(../img/container/body_bg.gif);
-    height: 4660px;
+    /* height: 4660px; */
     margin-top: -8px;
+    padding-bottom: 50px;
 }
 
 /* begin slide */
@@ -512,12 +513,8 @@
 /* begin body */
 
 .container-body {
-    height: 1000px;
+    /* height: 1000px; */
     margin-top: 16px;
-}
-
-.body__left {
-    height: calc(var(--container-combo-item-height) * 4);
 }
 
 /* left combo */
@@ -543,7 +540,7 @@
 /* left group */
 .left-group {
     background-image: url(../img/container/body-left/left-group-content/item_bgg.gif);
-    height: calc(var(--container-combo-item-height) * 4);
+    /* height: calc(var(--container-combo-item-height) * 4); */
 }
 
 .left-group__headding-list {
@@ -698,11 +695,12 @@
 .left-group__film-item-link {
     background-color: #1B1B1B;
     display: block;
-    height: var(--film-item-height);
+    /* height: var(--film-item-height); */
     position: relative;
     text-decoration: none;
     border: 2px solid rgba(0,0,0,.6);
     margin-top: 10px;
+    padding-bottom: 4px;
 }
 
 .left-group__film-item-link:hover .left-group__film-item-img {
@@ -760,7 +758,10 @@
     left: 0;
     background-color: #a21d0a;
     color: #fff;
-    padding: 4px 4px;
+    padding: 0 4px;
+    display: block;
+    height: 23px;
+    line-height: 23px;
 }
 
 .left-group__film-item-status::after {
@@ -772,27 +773,6 @@
     border-color: transparent transparent transparent #a21d0a;
     border-style: solid;
     border-width: 12px 0 12px 12px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* body__right */
-.body__right {
-    /* background-color: blue; */
-    height: calc(var(--container-combo-item-height) * 4);
 }
 
 .new-movie {
@@ -1157,10 +1137,15 @@
     flex-direction: column;
     transform: translateX(-100%);
     transition: transform ease-in 0.3s;
+    overflow: auto;
+}
+
+.mobile-menu__wapper ::-webkit-scrollbar {
+    display: none;
 }
 
 .mobile-menu__overlay {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     position: fixed;
     right: 0;
     left: 0;
@@ -1249,9 +1234,10 @@
     list-style: none;
     padding-left: 0;
     margin-left: 1px;
-    border: 1px solid var(--primary-color);
+    /* border: 1px solid var(--primary-color); */
     animation: fadeIn ease-in 0.5s;
     display: none;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .mobile-menu__item.mobile-menu__item--avtive .mobile-menu__item-sub-list {

@@ -96,7 +96,7 @@
 
     .container {
         margin-top: -10px;
-        height: 8020px;
+        /* height: 8020px; */
     }
 
     .left-group__film-item,
@@ -108,13 +108,15 @@
 
     .left-group__film-item-img {
         background-size: cover;
+        /* padding-top: 148%; */
     }
 
     .left-group__film-item-name1 {
         padding-top: 7px;
     }
-
+    
     .left-group__content-item-body {
         width: 184px;
     }
+
 }

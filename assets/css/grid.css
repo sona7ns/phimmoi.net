@@ -442,6 +442,9 @@
     .wide {
         width: 644px;
     }
+    .left-group__film-item-status {
+        background-color: blue;
+    }
 }
 
 /* > PC low resolution */
